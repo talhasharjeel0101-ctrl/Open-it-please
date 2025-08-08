@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px 20px 80px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #ff2e2e;
+      animation: fadeIn 2s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #ff2e2e;
+      animation: fadeIn 2.5s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .cake-icon {
+      font-size: 2rem;
+      margin: 0 10px;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.25);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .message-box p {
+      font-size: 1.4rem;
+      color: #222;
+      font-weight: 500;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hearts span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/2048px-Love_Heart_SVG.svg.png') no-repeat center center;
+      background-size: cover;
+      animation: floatHearts 10s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><span class="cake-icon">🎂</span>Wishing a Happy Birthday to Someone Who is Really Close to My Heart<span class="cake-icon">🎂</span></h1>
+    <div class="subtitle">🎂 Happy Birthday Midhat Ali Mir 🎂</div>
+    <div class="message-box">
+      <p>
+        Happy birthday to you Midhat Ali Mir 👸🏻<br><br>
+        May this year bring you everything your heart truly desires: happiness, love, peace, and all the success you deserve.<br><br>
+        Have the most amazing birthday ever! 🎉🎂❤️<br><br>
+        On your special day, I just want you to know how incredibly grateful I am to have you in my life. You’re more than a friend — you’re family, my safe space, my biggest cheerleader, and my favorite person to laugh with.<br><br>
+        💖 Happy Birthday Midhat Ali Mir 💖
+      </p>
+    </div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <footer>
+    Za Ta Sra Mena Kom 💌<br>
+    Please accept my apology 
+  </footer>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+    for (let i = 0; i < 50; i++) {
+      let heart = document.createElement('span');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = Math.random() * 10 + 's';
+      heart.style.width = heart.style.height = (Math.random() * 20 + 10) + 'px';
+      heartsContainer.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
